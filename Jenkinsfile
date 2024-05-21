@@ -9,6 +9,7 @@ pipeline {
         stage("code-checkout") {
             steps {
                 git changelog: false, poll: false, url: 'https://github.com/ash2code/library-management-system.git'
+                sh 'ls -al'
             }
         }
         stage("docker-build") {
